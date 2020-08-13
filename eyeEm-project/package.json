@@ -1,0 +1,19 @@
+{
+  "name": "eyeem-project",
+  "version": "1.0.0",
+  "description": "Automation test for EyeEm",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "author": "Livia Bonifacio",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^4.12.1",
+    "cypress-cucumber-preprocessor": "^2.5.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
