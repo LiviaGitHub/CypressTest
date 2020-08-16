@@ -15,9 +15,7 @@
 In the project folder
     
     - Fork this repository https://github.com/LiviaGitHub/EyeEm
-    - Run: npm init
-    - Run: npm install cypress cypress-cucumber-preprocessor
-    - Run: npm install faker
+    - Run: npm install
 
 **Open cypress**
 
