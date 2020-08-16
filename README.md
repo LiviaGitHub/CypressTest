@@ -24,4 +24,4 @@ In the project folder
 **Run test**
 
     -  Run: npm run cy:run 
-    -  Run: npm run cy:dashboard (The test will run on the console).
+    
