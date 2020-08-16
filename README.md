@@ -2,7 +2,7 @@
 
 **Task 1: QA Engineer Testing task**
 
-    - Download the task 1 here: 
+    - Download the task 1 here: reports folder
     - I added some examples of how I would report a bug and a risk.
     - I created the report in a PDF, but I normally use Jira or another tool that the company uses for this.
 
