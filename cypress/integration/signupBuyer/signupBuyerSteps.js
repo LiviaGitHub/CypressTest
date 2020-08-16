@@ -1,32 +1,39 @@
-import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
-import eyeEmHomePage from '/Users/liviabonifacio/Documents/eyeem-task2/eyeEm-project/cypress/integration/pages/homepage.js'
-import signUpPage from '/Users/liviabonifacio/Documents/eyeem-task2/eyeEm-project/cypress/integration/pages/signupPage.js'
-import signupBuyerPage from '/Users/liviabonifacio/Documents/eyeem-task2/eyeEm-project/cypress/integration/pages/signupBuyerPage.js'
+import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
+import eyeEmHomePage from '../../pages/homepage.js'
+import signUpPage from '../../pages/signupPage.js'
+import signupBuyerPage from '../../pages/signupBuyerPage.js'
+import commons from '../../pages/commons.js'
+import faker from 'faker'
+import loggedHomePage from "../../pages/loggedHomePage.js"
+
+const user_email = faker.internet.email()
 
 Given('I open EyeEm.com', () => {
     eyeEmHomePage.visitHomePage()
 })
 
-When('I click the Sign Up button', () => {
-    //eyeEmHomePage.clickSignUp();
-    cy.visit('https://www.eyeem.com/signup')
+When('I go to Lets get you started screen', () => {
+    cy.visit('/signup')
 })
 
-Then('I go to Lets get you started screen', () => {
-    signUpPage.checkUrl()
+And('I click For Image Buyers', () => {
     signUpPage.clickForImageBuyers()
 }) 
 
-When('I enter my email', () => {
-    signupBuyerPage.enterEmail()
+And('I enter my email', () => {
+    signupBuyerPage.enterUserEmail(user_email)
 })
 
 And('I enter my password', () => {
-    cy.fixture('defaultData').then(defaultData => {
-        signupBuyerPage.enterPassword(defaultData.password)})
+    signupBuyerPage.enterPassword()
 })
 
 And('I click on Sign Up', () => {
     signupBuyerPage.clickSignUp()
+})
+
+Then('I am logged in as a Buyers', () => {
+    loggedHomePage.clickAccount()
+    commons.pageMustHave(user_email)
 })
 

@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "cy:dashboard": "cypress run --record --key 9e7df510-87e7-4849-99be-e6ebd2fd130f"
   },
   "author": "Livia Bonifacio",
   "license": "ISC",
   "dependencies": {
     "cypress": "^4.12.1",
-    "cypress-cucumber-preprocessor": "^2.5.4"
+    "cypress-cucumber-preprocessor": "^2.5.4",
+    "faker": "^4.1.0"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
