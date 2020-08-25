@@ -1,5 +1,3 @@
-# Tests
-
 **Test Automation task**
 
     - Assert a successful sign up for a Buyer.
