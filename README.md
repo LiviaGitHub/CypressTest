@@ -6,7 +6,7 @@
 
 In the project folder
     
-    - Fork this repository https://github.com/LiviaGitHub/EyeEm
+    - Fork this repository 
     - Run: npm install
 
 **Open cypress**
